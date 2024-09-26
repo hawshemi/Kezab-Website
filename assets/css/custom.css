@@ -1,40 +1,81 @@
 /* Custom CSS */
 
-/* Apply font to all English text */
+/* Apply font to all Persian text */
+[lang="fa"], [dir="rtl"] {
+  font-family: "Vazirmatn", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* Apply font to all Persian text */
 [lang="en"] {
   font-family: "Lato", sans-serif;
   font-optical-sizing: auto;
 }
 
-/* Apply font to all Persian text */
-[lang="fa"], [dir="rtl"] {
-    font-family: "Vazirmatn", sans-serif;
-    font-optical-sizing: auto;
-}
-
-.content {
-  margin-top: 4em;
-}
-
 .icon-link {
-    text-decoration: none;
-    font-size: 2em;
-    margin: 0 10px;
-    margin-top: 1em;
-    background-color: rgba(128, 128, 128, 0.2);
-    padding: 10px;
-    border-radius: 5px;
-    display: inline-block;
-    line-height: 1;
-    color: inherit;
-    transition: background-color 0.4s, color 0.4s;
-  }
+  text-decoration: none;
+  font-size: 2em;
+  margin: 0 10px;
+  margin-top: 1em;
+  background-color: rgba(128, 128, 128, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  line-height: 1;
+  color: inherit;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-  .icon-link:hover {
-    background-color: rgba(128, 128, 128, 0.4);
-  }
+.icon-link:hover {
+  background-color: rgba(128, 128, 128, 0.4);
+  color: #000; 
+}
 
 .rss {
-  margin-top: 4em;
+text-align: center;
+margin-top: 2em;
+}
+
+
+/* About Table Styling */
+aboutTable {
+  display: flex;
+  margin: 2em 0;
+  justify-content: center;
+}
+
+aboutTable table {
+  border-collapse: collapse;
   text-align: center;
+  font-family: inherit;
+}
+
+aboutTable th, aboutTable td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+aboutTable th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+aboutTable tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Dark Theme Support */
+@media (prefers-color-scheme: dark) {
+  aboutTable th {
+    background-color: #333;
+    color: #f4f4f4;
+  }
+
+  aboutTable td {
+    border-bottom: 1px solid #555;
+  }
+
+  aboutTable tr:nth-child(even) {
+    background-color: #444;
+  }
 }

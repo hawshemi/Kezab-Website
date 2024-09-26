@@ -21,7 +21,12 @@ The residents of Kezab maintain a solid connection to their cultural roots, cele
 
 Surrounded by the vast and awe-inspiring landscapes of the Yazd desert, Kezab offers a place to live and experience the serenity and beauty of nature. The village's small population creates a close-knit community where everyone knows each other, fostering a strong sense of belonging and mutual support. This community strength is one of Kezab's greatest assets, helping it weather environmental and economic challenges.
 
-
+<br>
+{{< cards >}}
+  {{< card link="about" title="About" icon="information-circle" >}}
+  {{< card link="gallery" title="Gallery" icon="photograph" >}}
+{{< /cards >}}
+<br>
 
 <div class="rss">
 {{< hextra/hero-badge link="index.xml" >}}
