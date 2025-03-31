@@ -67,4 +67,4 @@ params:
   footer:
     displayTitle: true
     displayCopyright: true
-    displayPoweredBy: true
+    displayPoweredBy: false
