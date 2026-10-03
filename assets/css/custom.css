@@ -463,7 +463,7 @@ html[lang="fa"] .content {
   gap: 0.375rem;
 }
 
-.footer-links :is(a, button) {
+.footer-links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -477,92 +477,10 @@ html[lang="fa"] .content {
   cursor: pointer;
 }
 
-.footer-links :is(a, button):hover {
+.footer-links a:hover {
   border-color: var(--village-muted);
   background: var(--village-bg);
   color: var(--village-olive);
-}
-
-.search-dialog {
-  width: min(32rem, calc(100% - 2rem));
-  max-height: 75svh;
-  padding: 1rem;
-  border: 1px solid var(--village-border);
-  border-radius: 0.75rem;
-  background: var(--village-bg);
-  color: var(--village-text);
-}
-
-.search-dialog::backdrop {
-  background: #0006;
-}
-
-.search-dialog-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-block-end: 0.75rem;
-}
-
-.search-dialog-header h2 {
-  margin: 0;
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-
-.search-close {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 2.375rem;
-  min-height: 2.375rem;
-  padding: 0;
-  border: 1px solid var(--village-border);
-  border-radius: var(--village-radius);
-  background: var(--village-surface);
-  color: var(--village-muted);
-  font-size: 0.8125rem;
-  cursor: pointer;
-}
-
-.search-close:hover {
-  border-color: var(--village-muted);
-  color: var(--village-text);
-}
-
-.search-input {
-  width: 100%;
-  min-height: 2.75rem;
-  padding: 0.6rem 0.75rem;
-  border: 1px solid var(--village-border);
-  border-radius: var(--village-radius);
-  background: var(--village-bg);
-  color: var(--village-text);
-}
-
-.search-results {
-  margin: 0.75rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.search-result-link {
-  display: block;
-  min-height: 2.75rem;
-  padding: 0.6rem 0.75rem;
-  border-radius: var(--village-radius);
-  text-decoration: none;
-}
-
-.search-result-link:hover {
-  background: var(--village-surface);
-}
-
-.search-status {
-  margin: 0.75rem 0 0;
-  color: var(--village-muted);
-  font-size: 0.875rem;
 }
 
 #content:has(.contact-details) .page-title {
@@ -847,14 +765,12 @@ html[lang="fa"] .content {
   .settings-trigger,
   .settings-language a,
   .theme-options label,
-  .footer-links :is(a, button),
-  .search-close,
+  .footer-links a,
   .content :is(.village-actions a, .section-nav a, .contact-link) {
     min-height: 2.75rem;
   }
 
-  .theme-trigger,
-  .search-close {
+  .theme-trigger {
     min-width: 2.75rem;
   }
 }

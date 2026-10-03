@@ -1,5 +1,0 @@
-{{- $index := slice -}}
-{{- range where site.Pages "Kind" "in" (slice "home" "section" "page") -}}
-  {{- $index = $index | append (dict "title" .Title "url" .RelPermalink "content" .Plain) -}}
-{{- end -}}
-{{- $index | jsonify -}}

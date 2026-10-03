@@ -10,9 +10,6 @@
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "footer.html" . }}
-  {{ partial "search.html" . }}
   {{ if .Store.Get "hasGallery" }}{{ partial "scripts/gallery.html" . }}{{ end }}
-  {{ $search := resources.Get "js/search.js" | minify | fingerprint }}
-  <script src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}" defer></script>
 </body>
 </html>

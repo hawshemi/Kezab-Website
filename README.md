@@ -12,8 +12,6 @@ Build the production site with `hugo --gc --minify`.
 
 The layouts, gallery shortcodes, and styles live in this repository. The header has separate language and appearance controls. Light, Dark, and System choices persist across pages.
 
-Search uses a small JSON index for each language. Open it from the footer or with Ctrl/Cmd K.
-
 [PhotoSwipe 5.4.4](https://www.npmjs.com/package/photoswipe/v/5.4.4) is bundled in `assets/vendor`. Its license is included in `static/licenses`. Builds do not need Go, npm, or CDN access.
 
 [Roboto](https://github.com/google/fonts/tree/main/ofl/roboto) and [Vazirmatn](https://github.com/google/fonts/tree/main/ofl/vazirmatn) are self-hosted in `static/fonts`. The variable WOFF2 files cover weights 100–900. They use Google Fonts' Latin and Arabic subsets. Both SIL Open Font License files are included in `static/licenses`.

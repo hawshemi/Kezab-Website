@@ -2,12 +2,9 @@ home: خانه
 about: درباره
 contact: ارتباط
 gallery: گالری
-search: جستجو
 copyright: "© ۲۰۲۶ کذاب / هاشمی"
 dark: "تاریک"
 light: "روشن"
-noResultsFound: "هیچ نتیجه‌ای پیدا نشد."
-searchPlaceholder: "جستجو..."
 closeImage: "بستن تصویر"
 zoomImage: "بزرگ‌نمایی تصویر"
 imageLoadError: "تصویر بارگیری نشد."
@@ -21,5 +18,4 @@ previousImage: "تصویر قبلی"
 nextImage: "تصویر بعدی"
 imageGallery: "گالری تصاویر"
 villagePhotoAlt: "خانه‌ها و درختان روستا در دامنه‌ی تپه‌های سنگی"
-closeSearch: "بستن جستجو"
 pageNotFound: "صفحه پیدا نشد"
