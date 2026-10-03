@@ -1,12 +1,11 @@
 ---
 title: گالری روستای کذاب
-toc: false
 aliases: ["/fa/gallery/"]
 ---
 
 ## خارج روستا
 
-{{< gallery type="grid" cols="3" >}}
+{{< gallery >}}
   {{< gallery-item src="album/main/kezab main 1.webp" alt="نمای روستا و باغ‌ها از بالا در پای کوه‌های سنگی و پرشیب" caption="روستا در پای کوه‌ها" >}}
   {{< gallery-item src="album/main/kezab main 2.webp" alt="پیش‌زمینه سنگی و زمین‌های پله‌ای در پای رشته‌کوه زیر آسمان آبی" caption="زمین‌ها در پای رشته‌کوه" >}}
   {{< gallery-item src="album/main/kezab main 3.webp" alt="ساختمان‌ها و زمین‌های روستا در پای دامنه پرشیب کوه" caption="روستا در پای دامنه سنگی" >}}
@@ -17,7 +16,7 @@ aliases: ["/fa/gallery/"]
 
 ## داخل روستا
 
-{{< gallery type="grid" cols="3" >}}
+{{< gallery >}}
   {{< gallery-item src="album/inner/kezab inner 1.webp" alt="کوچه‌ای سایه‌دار میان دیوارهای سنگی با جوی باریک آب زیر درختان" caption="کوچه سنگی در سایه درختان" >}}
   {{< gallery-item src="album/inner/kezab inner 2.webp" alt="مسیر پوشیده از برگ میان دیوارهای سنگی و زیر شاخه‌هایی با برگ زرد" caption="مسیر زیر برگ‌های زرد" >}}
   {{< gallery-item src="album/inner/kezab inner 3.webp" alt="کوچه‌ای آسفالت‌شده با درختان بی‌برگ، برگ‌های ریخته و دیوارهای آجری و سنگی" caption="کوچه درخت‌دار روستا" >}}
@@ -28,7 +27,7 @@ aliases: ["/fa/gallery/"]
 
 ## فصل زمستان
 
-{{< gallery type="grid" cols="3" >}}
+{{< gallery >}}
   {{< gallery-item src="album/winter/kezab winter 1.webp" alt="کوچه و جوی آب پوشیده از برف میان دیوارهای سنگی و زیر شاخه‌های بی‌برگ" caption="برف در کوچه سنگی" >}}
   {{< gallery-item src="album/winter/kezab winter 2.webp" alt="جریان آب میان کناره‌های برفی و دیوارهای سنگی زیر درختان بی‌برگ" caption="جریان آب میان برف‌ها" >}}
   {{< gallery-item src="album/winter/kezab winter 3.webp" alt="مسیر پوشیده از برف کنار جوی آب تیره، درخت بی‌برگ و تیرهای برق" caption="مسیر برفی کنار جوی" >}}

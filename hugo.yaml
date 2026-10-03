@@ -26,19 +26,15 @@ languages:
 menu:
   main:
     - identifier: home
-      name: Home
       pageRef: /
       weight: 1
     - identifier: about
-      name: About
       pageRef: /about
       weight: 2
     - identifier: gallery
-      name: Gallery
       pageRef: /gallery
       weight: 3
     - identifier: contact
-      name: Contact
       pageRef: /contact
       weight: 4
 

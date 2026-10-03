@@ -1,6 +1,5 @@
 ---
 title: Kezab village
-toc: false
 ---
 
 {{< village-photo alt="Village rooftops and trees below rocky hills" caption="A view of Kezab and its surrounding hills." >}}

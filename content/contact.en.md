@@ -1,6 +1,5 @@
 ---
 title: Contact
-toc: false
 ---
 
 <div class="contact-details">

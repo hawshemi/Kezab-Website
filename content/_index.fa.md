@@ -1,6 +1,5 @@
 ---
 title: روستای کذاب
-toc: false
 aliases: ["/fa/"]
 ---
 
