@@ -17,5 +17,3 @@ toc: false
 ## Landscape and water
 
 The village lies below rocky mountains. A mountain spring supplies water for drinking and agriculture. The About page describes the village's location, terrain, climate, and water sources. The gallery includes exterior, interior, and winter photographs.
-
-<p><a class="feed-link" href="index.xml">{{< icon name="rss" attributes="height=16" >}}<span>RSS feed</span></a></p>

@@ -31,6 +31,8 @@ Implementation is complete. Production builds and desktop and phone checks pass.
 - The theme's existing FlexSearch 0.8.143 and PhotoSwipe 5.4.4 files are bundled with their licenses. This avoids build-time CDN access.
 - All eight pages were inspected at 1365 by 900, 390 by 844, and 320 by 800. No page-wide horizontal overflow or visible broken images was found.
 - Section links and search results land below the header. The mobile menu scrolls on short screens.
+- The language switch is a text link to the matching page. The header has no search control. A muted RSS link sits in the compact footer.
+- Contact descriptions and email links are centered in both languages. English uses Roboto and Persian uses Vazirmatn. Both fonts are self-hosted with their licenses.
 
 ## Dependency updates
 
@@ -92,7 +94,7 @@ The current gallery images have no accessible descriptions. The existing Swipebo
 
 - [x] Put a visible language switch in the header on desktop and phone.
 - [x] Keep navigation labels short, translated, and consistent between desktop and mobile menus.
-- [x] Translate remaining English labels on Persian pages, including the RSS label.
+- [x] Translate remaining English labels on Persian pages. The user requested the visible RSS acronym in the footer instead of a Persian feed label.
 - [x] Make footer attribution and year consistent across both languages.
 - [x] Replace the icon-only email link with a visible email address or named email button. Preserve `contact@kezab.ir`.
 - [x] Correct the English contact sentence that currently says, "I would be happy to share them with me."

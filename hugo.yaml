@@ -50,12 +50,6 @@ menu:
       name: Contact
       pageRef: /contact
       weight: 4
-    - name: Search
-      identifier: search
-      weight: 5
-      params:
-        type: search
-        icon: search
     - name: Language
       weight: 6
       params:
