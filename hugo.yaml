@@ -1,9 +1,9 @@
-title: Kezab Village
+baseURL: https://kezab.ir/
+title: روستای کذاب
 
 module:
   imports:
     - path: github.com/imfing/hextra
-    - path: github.com/mfg92/hugo-shortcode-gallery
     
 markup:
   goldmark:
@@ -15,16 +15,22 @@ markup:
 
 enableInlineShortcodes: true
 
-defaultContentLanguage: en
+defaultContentLanguage: fa
+defaultContentLanguageInSubdir: false
 
 languages:
   en:
-    languageName: English
-    weight: 1
-  fa:
-    languageName: فارسی
+    label: English
+    direction: ltr
+    locale: en-US
+    title: Kezab Village
     weight: 2
-    languageDirection: rtl
+  fa:
+    label: فارسی
+    direction: rtl
+    locale: fa-IR
+    title: روستای کذاب
+    weight: 1
 
 menu:
   main:
@@ -45,9 +51,16 @@ menu:
       pageRef: /contact
       weight: 4
     - name: Search
+      identifier: search
       weight: 5
       params:
         type: search
+        icon: search
+    - name: Language
+      weight: 6
+      params:
+        type: language-switch
+        label: true
 
 params:
   theme:
@@ -59,6 +72,7 @@ params:
     type: flexsearch
     flexsearch:
       index: content
+      js: vendor/flexsearch-0.8.143.min.js
 
   navbar:
     displayTitle: true

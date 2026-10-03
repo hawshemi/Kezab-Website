@@ -1,0 +1,7 @@
+{{- $photo := resources.Get "album/main/kezab main 5.webp" -}}
+{{- $small := $photo.Resize "480x webp q85" -}}
+{{- $medium := $photo.Resize "768x webp q85" -}}
+<figure class="village-hero">
+  <img src="{{ $photo.RelPermalink }}" srcset="{{ $small.RelPermalink }} 480w, {{ $medium.RelPermalink }} 768w, {{ $photo.RelPermalink }} {{ $photo.Width }}w" sizes="(max-width: 767px) calc(100vw - 32px), 840px" width="{{ $photo.Width }}" height="{{ $photo.Height }}" alt="{{ .Get "alt" }}" loading="eager" fetchpriority="high">
+  <figcaption>{{ .Get "caption" }}</figcaption>
+</figure>

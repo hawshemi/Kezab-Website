@@ -1,81 +1,316 @@
-/* Custom CSS */
+:root {
+  --village-bg: #fbf8f1;
+  --village-surface: #f2ebdd;
+  --village-text: #292b24;
+  --village-muted: #626651;
+  --village-olive: #4e622f;
+  --village-border: #d7d3c5;
+  --village-radius: 0.75rem;
+  --primary-hue: 86deg;
+  --primary-saturation: 27%;
+  --primary-lightness: 39%;
+}
 
-/* Apply font to all Persian text */
-[lang="fa"], [dir="rtl"] {
+html.dark {
+  --village-bg: #191d18;
+  --village-surface: #22291f;
+  --village-text: #e7eadb;
+  --village-muted: #bac2a7;
+  --village-olive: #b7ca93;
+  --village-border: #424b36;
+  --primary-lightness: 70%;
+}
+
+[lang="fa"] {
   font-family: "Vazirmatn", sans-serif;
   font-optical-sizing: auto;
 }
 
-/* Apply font to all Persian text */
 [lang="en"] {
   font-family: "Lato", sans-serif;
-  font-optical-sizing: auto;
 }
 
-.icon-link {
-  text-decoration: none;
-  font-size: 2em;
-  margin: 0 10px;
-  margin-top: 1em;
-  background-color: rgba(128, 128, 128, 0.2);
-  padding: 10px;
-  border-radius: 5px;
-  display: inline-block;
-  line-height: 1;
-  color: inherit;
-  transition: background-color 0.3s, color 0.3s;
+body {
+  background: var(--village-bg);
+  color: var(--village-text);
 }
 
-.icon-link:hover {
-  background-color: rgba(128, 128, 128, 0.4);
-  color: #000; 
+.hextra-nav-container-blur {
+  background: var(--village-bg) !important;
+  box-shadow: 0 1px 0 var(--village-border);
 }
 
-.rss {
-text-align: center;
-margin-top: 2em;
+.hextra-footer {
+  background: var(--village-surface);
+  border-top: 1px solid var(--village-border);
 }
 
+.hextra-custom-footer,
+.hextra-footer > div {
+  color: var(--village-muted);
+}
 
-/* About Table Styling */
-aboutTable {
-  display: flex;
-  margin: 2em 0;
+.content {
+  color: var(--village-text);
+}
+
+#content :is(h1, h2, h3, h4) {
+  color: var(--village-text);
+  letter-spacing: normal;
+  line-height: 1.5;
+  scroll-margin-top: 5rem;
+}
+
+#content h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.content h2 {
+  font-size: 1.65rem;
+  border-color: var(--village-border);
+}
+
+.content p {
+  line-height: 1.85;
+}
+
+.content a {
+  color: var(--village-olive);
+  text-underline-offset: 0.2em;
+}
+
+.content a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:is(a, button, summary, input, [tabindex]):focus-visible {
+  outline: 3px solid var(--village-olive);
+  outline-offset: 3px;
+  scroll-margin-block: 5rem;
+}
+
+body > a[href="#content"]:focus-visible {
+  background: var(--village-olive);
+  color: var(--village-bg);
+}
+
+.hextra-language-switcher,
+.content :is(.village-actions a, .contact-link, .feed-link, .section-nav a) {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--village-border);
+  border-radius: var(--village-radius);
+  background: var(--village-surface);
+  color: var(--village-olive);
+  font-weight: 600;
+  text-decoration: none;
 }
 
-aboutTable table {
-  border-collapse: collapse;
-  text-align: center;
-  font-family: inherit;
+.hextra-language-switcher {
+  min-height: 2.25rem;
+  padding: 0.25rem 0.6rem;
+  flex-shrink: 0;
+  font-size: 0.875rem;
 }
 
-aboutTable th, aboutTable td {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
+.hextra-language-switcher:hover,
+.content :is(.village-actions a, .contact-link, .feed-link, .section-nav a):hover {
+  border-color: var(--village-olive);
 }
 
-aboutTable th {
-  background-color: #f4f4f4;
-  font-weight: bold;
+.hextra-language-switcher *,
+.hextra-language-options * {
+  text-transform: none;
 }
 
-aboutTable tr:nth-child(even) {
-  background-color: #fafafa;
+.hextra-language-options {
+  background: var(--village-bg);
+  border-color: var(--village-border);
 }
 
-/* Dark Theme Support */
-@media (prefers-color-scheme: dark) {
-  aboutTable th {
-    background-color: #333;
-    color: #f4f4f4;
+.hextra-language-options a {
+  color: var(--village-text);
+}
+
+.hextra-language-options a:hover {
+  background: var(--village-surface);
+}
+
+#hextra-search-dialog {
+  right: auto;
+  background: var(--village-bg);
+  color: var(--village-text);
+  border-color: var(--village-border);
+}
+
+.village-hero {
+  margin-block: 1.5rem;
+}
+
+.content .village-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin: 0;
+  border-radius: var(--village-radius);
+}
+
+.content .village-hero figcaption {
+  color: var(--village-muted);
+  text-align: start;
+}
+
+.village-intro {
+  font-size: 1.075rem;
+}
+
+.village-actions,
+.section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-block: 1.25rem;
+}
+
+.content .section-nav a {
+  font-size: 0.9rem;
+  padding-inline: 0.8rem;
+}
+
+.village-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-block: 1.5rem;
+}
+
+.village-facts > div {
+  padding: 1rem;
+  border: 1px solid var(--village-border);
+  border-radius: var(--village-radius);
+  background: var(--village-surface);
+}
+
+.content .village-facts dt {
+  margin: 0 0 0.4rem;
+  color: var(--village-muted);
+  font-size: 0.875rem;
+}
+
+.content .village-facts dd {
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+.table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-block: 1.5rem;
+  border: 1px solid var(--village-border);
+  border-radius: var(--village-radius);
+  scrollbar-color: var(--village-muted) var(--village-surface);
+}
+
+.content .table-scroll table {
+  display: table;
+  width: 100%;
+  min-width: 34rem;
+  margin: 0;
+  text-align: start;
+  line-height: 1.7;
+}
+
+.table-scroll :is(th, td, tr) {
+  border-color: var(--village-border);
+}
+
+.table-scroll :is(th, td) {
+  padding: 0.65rem 0.8rem;
+}
+
+.table-scroll thead,
+.table-scroll tbody tr:nth-child(even) {
+  background: var(--village-surface);
+}
+
+.hextra-gallery__item {
+  border: 1px solid var(--village-border);
+  border-radius: var(--village-radius);
+  background: var(--village-surface);
+}
+
+.hextra-gallery--grid .hextra-gallery__item {
+  aspect-ratio: auto;
+}
+
+.hextra-gallery--grid .hextra-gallery__link {
+  height: auto;
+  aspect-ratio: 4 / 3;
+}
+
+.content .hextra-gallery__item img {
+  margin: 0;
+  border-radius: 0;
+}
+
+.content .hextra-gallery__caption {
+  position: static;
+  background: var(--village-surface);
+  color: var(--village-text);
+  text-align: start;
+  line-height: 1.6;
+  font-size: 0.875rem;
+}
+
+.content .hextra-gallery__caption p {
+  margin: 0;
+  line-height: inherit;
+}
+
+.hextra-gallery__link:focus-visible {
+  outline-offset: -3px;
+}
+
+.pswp__button:focus-visible {
+  outline-color: #fff;
+  outline-offset: -5px;
+}
+
+.pswp__counter {
+  direction: ltr;
+}
+
+@media (max-width: 48rem) {
+  .hextra-sidebar-container,
+  .hextra-sidebar-container [data-toggle-animation="show"] {
+    background: var(--village-bg);
   }
 
-  aboutTable td {
-    border-bottom: 1px solid #555;
+  .village-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 30rem) {
+  .village-facts {
+    grid-template-columns: 1fr;
   }
 
-  aboutTable tr:nth-child(even) {
-    background-color: #444;
+  .village-hero {
+    margin-block: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hextra-gallery__link:hover img {
+    transform: none;
+    scale: none;
   }
 }
