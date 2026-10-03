@@ -1,0 +1,42 @@
+{{- $css := resources.Get "vendor/photoswipe-5.4.4.css" | fingerprint -}}
+{{- $lightbox := resources.Get "vendor/photoswipe-lightbox-5.4.4.min.js" | fingerprint -}}
+{{- $core := resources.Get "vendor/photoswipe-5.4.4.min.js" | fingerprint -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+<script type="module">
+  import PhotoSwipeLightbox from {{ $lightbox.RelPermalink | jsonify | safeJS }}
+
+  document.querySelectorAll('[data-pswp-gallery]').forEach(gallery => {
+    let thumbnail
+    const lightbox = new PhotoSwipeLightbox({
+      gallery,
+      children: 'a[data-pswp-width]',
+      pswpModule: () => import({{ $core.RelPermalink | jsonify | safeJS }}),
+      closeTitle: {{ T "closeImage" | jsonify | safeJS }},
+      zoomTitle: {{ T "zoomImage" | jsonify | safeJS }},
+      arrowPrevTitle: {{ T "previousImage" | jsonify | safeJS }},
+      arrowNextTitle: {{ T "nextImage" | jsonify | safeJS }},
+      errorMsg: {{ T "imageLoadError" | jsonify | safeJS }},
+    })
+    lightbox.on('afterInit', () => {
+      thumbnail = lightbox.pswp.currSlide.data.element
+      lightbox.pswp.element.setAttribute('aria-label', {{ T "imageGallery" | jsonify | safeJS }})
+    })
+    lightbox.on('destroy', () => thumbnail?.focus({ preventScroll: true }))
+    lightbox.on('uiRegister', () => {
+      lightbox.pswp.ui.registerElement({
+        name: 'caption',
+        order: 9,
+        isButton: false,
+        appendTo: 'root',
+        onInit: (caption, pswp) => {
+          caption.setAttribute('aria-live', 'polite')
+          pswp.on('change', () => {
+            const image = pswp.currSlide.data.element
+            caption.textContent = image.closest('figure').querySelector('figcaption')?.textContent || image.querySelector('img').alt
+          })
+        },
+      })
+    })
+    lightbox.init()
+  })
+</script>

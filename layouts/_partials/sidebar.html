@@ -1,0 +1,18 @@
+{{- $page := .context -}}
+<aside class="hextra-sidebar-container hx:overflow-y-auto hx:md:w-64 hx:md:shrink-0 hx:print:hidden hx:max-md:[transform:translate3d(0,-100%,0)]">
+  <nav class="hx:md:hidden hx:p-4" aria-label="{{ T "menu" }}">
+    <ul class="hx:flex hx:flex-col hx:gap-1">
+      {{- range site.Menus.main -}}
+        {{- if .PageRef -}}
+          {{- $link := relLangURL (strings.TrimPrefix "/" .PageRef) -}}
+          <li>
+            <a class="hx:flex hx:rounded-md hx:px-3 hx:py-3" href="{{ $link }}" {{ if eq (strings.TrimSuffix "/" $page.RelPermalink) (strings.TrimSuffix "/" $link) }}aria-current="page"{{ end }}>{{ or (T .Identifier) .Name }}</a>
+          </li>
+        {{- end -}}
+      {{- end -}}
+    </ul>
+    <div class="hx:mt-4">
+      {{- partial "theme-toggle.html" (dict "location" "top") -}}
+    </div>
+  </nav>
+</aside>
