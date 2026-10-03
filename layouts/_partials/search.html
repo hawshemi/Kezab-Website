@@ -1,0 +1,14 @@
+<dialog id="site-search" class="search-dialog" aria-labelledby="search-title" data-search-index="{{ (site.Home.OutputFormats.Get "Search").RelPermalink }}" data-no-results="{{ T "noResultsFound" }}">
+  <div class="search-dialog-header">
+    <h2 id="search-title">{{ T "search" }}</h2>
+    <form method="dialog" class="search-form">
+      <button type="submit" class="search-close" aria-label="{{ T "closeSearch" }}">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </form>
+  </div>
+  <label class="sr-only" for="search-input">{{ T "search" }}</label>
+  <input id="search-input" class="search-input" type="search" placeholder="{{ T "searchPlaceholder" }}" autocomplete="off" spellcheck="false" autofocus>
+  <ul class="search-results"></ul>
+  <p class="search-status" role="status"></p>
+</dialog>

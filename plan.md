@@ -1,5 +1,7 @@
 # Kezab website update plan
 
+This records the earlier site update. The custom Hugo layouts now replace Hextra. Language and appearance settings share the header, and search uses a native dialog and per-language JSON index. See README.md for the current setup.
+
 Implement the dependency updates and UI/UX improvements below. The user approved this scope on October 3, 2026. Persian must be the default language at `https://kezab.ir/`. Keep English available under `/en/`.
 
 Implementation is complete. Production builds and desktop and phone checks pass. Actual touch gestures and browser zoom remain manual checks.

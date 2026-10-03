@@ -1,0 +1,10 @@
+{{- $photo := resources.Get (.Get "src") -}}
+{{- $small := $photo.Resize (printf "%dx webp q85" (int (math.Min 320 $photo.Width))) -}}
+{{- $medium := $photo.Resize (printf "%dx webp q85" (int (math.Min 640 $photo.Width))) -}}
+{{- $large := $photo.Resize (printf "%dx webp q85" (int (math.Min 960 $photo.Width))) -}}
+<figure class="gallery-item">
+  <a class="gallery-link" href="{{ $photo.RelPermalink }}" data-pswp-width="{{ $photo.Width }}" data-pswp-height="{{ $photo.Height }}">
+    <img src="{{ $medium.RelPermalink }}" srcset="{{ $small.RelPermalink }} {{ $small.Width }}w{{ if gt $medium.Width $small.Width }}, {{ $medium.RelPermalink }} {{ $medium.Width }}w{{ end }}{{ if gt $large.Width $medium.Width }}, {{ $large.RelPermalink }} {{ $large.Width }}w{{ end }}" sizes="(max-width: 30rem) calc(100vw - 3rem), (max-width: 48rem) calc(50vw - 2rem), 280px" width="{{ $medium.Width }}" height="{{ $medium.Height }}" alt="{{ .Get "alt" }}" loading="lazy" decoding="async">
+  </a>
+  <figcaption class="gallery-caption">{{ .Get "caption" }}</figcaption>
+</figure>

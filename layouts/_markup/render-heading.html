@@ -1,6 +1,3 @@
-<h{{ .Level }} id="{{ .Anchor | safeURL }}" data-hextra-search-id="{{ .Anchor | safeURL }}" {{- with .Attributes.class }} class="{{ . }}" {{- end }}>
+<h{{ .Level }} id="{{ .Anchor | safeURL }}" {{- with .Attributes.class }} class="{{ . }}" {{- end }}>
   {{- .Text | safeHTML -}}
-  {{- if gt .Level 1 -}}
-    <a href="#{{ .Anchor | safeURL }}" class="subheading-anchor" aria-label="{{ T "permalinkLabel" }}"></a>
-  {{- end -}}
 </h{{ .Level }}>
