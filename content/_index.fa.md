@@ -11,8 +11,8 @@ aliases: ["/fa/"]
 </div>
 
 <nav class="village-actions" aria-label="آشنایی با کذاب">
+  <a class="village-primary-link" href="{{< relref "gallery" >}}">دیدن گالری</a>
   <a href="{{< relref "about" >}}">درباره‌ی روستا</a>
-  <a href="{{< relref "gallery" >}}">دیدن گالری</a>
 </nav>
 
 ## چشم‌انداز و آب

@@ -10,8 +10,8 @@ toc: false
 </div>
 
 <nav class="village-actions" aria-label="Explore Kezab">
+  <a class="village-primary-link" href="{{< relref "gallery" >}}">View the gallery</a>
   <a href="{{< relref "about" >}}">About the village</a>
-  <a href="{{< relref "gallery" >}}">View the gallery</a>
 </nav>
 
 ## Landscape and water

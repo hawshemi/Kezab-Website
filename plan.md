@@ -33,6 +33,9 @@ Implementation is complete. Production builds and desktop and phone checks pass.
 - Section links and search results land below the header. The mobile menu scrolls on short screens.
 - The language switch is a text link to the matching page. The header has no search control. A muted RSS link sits in the compact footer.
 - Contact descriptions and email links are centered in both languages. English uses Roboto and Persian uses Vazirmatn. Both fonts are self-hosted with their licenses.
+- The centered page, header, and footer share a 900px maximum width. Empty desktop sidebar columns are hidden, and the mobile menu remains available.
+- Warm stone and olive colors pair with a warm charcoal dark theme. Body text uses 16px Roboto at 1.65 line height and 17px Vazirmatn at 1.85. Headings are smaller, prose is limited to 66ch, and corners use an 8px radius.
+- Gallery is the emphasized homepage action. About section links are plain, facts use compact label/value rows, and the contact footer fits within the viewport on short pages.
 
 ## Dependency updates
 
@@ -101,8 +104,11 @@ The current gallery images have no accessible descriptions. The existing Swipebo
 
 ## Visual polish
 
-- [x] Use a restrained sand-and-olive palette with readable contrast in light and dark themes.
+- [x] Use the approved warm stone and olive palette with a warm charcoal dark theme and readable text contrast.
 - [x] Make spacing, image corners, links, and buttons consistent.
+- [x] Center the page within 900px and align its gutters with the header and footer. Remove empty desktop columns while preserving mobile navigation.
+- [x] Apply language-specific body size and line height, a 66ch prose limit, smaller headings, and 8px corners.
+- [x] Emphasize the Gallery action and simplify About navigation and fact rows. Keep the theme set to System by default and preserve visitor choices.
 - [x] Make table colors follow the selected Hextra theme. Current custom CSS only follows `prefers-color-scheme`.
 - [x] Keep the design compact, minimal, and comfortable to read in both languages.
 - [x] Respect reduced motion and show visible keyboard focus.
