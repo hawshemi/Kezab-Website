@@ -11,7 +11,14 @@ applyTheme()
 systemTheme.addEventListener('change', applyTheme)
 
 document.addEventListener('DOMContentLoaded', () => {
-  const settings = document.querySelector('.settings')
+  const settings = document.querySelectorAll('.settings')
+  settings.forEach(disclosure => {
+    disclosure.addEventListener('toggle', () => {
+      if (disclosure.open) settings.forEach(other => {
+        if (other !== disclosure) other.open = false
+      })
+    })
+  })
   document.querySelectorAll('[name="color-theme"]').forEach(input => {
     input.checked = input.value === theme
     input.addEventListener('change', () => {
@@ -21,12 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
   document.addEventListener('click', event => {
-    if (!settings.contains(event.target)) settings.open = false
+    settings.forEach(disclosure => {
+      if (!disclosure.contains(event.target)) disclosure.open = false
+    })
   })
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && settings.open) {
-      settings.open = false
-      settings.querySelector('summary').focus()
-    }
+    if (event.key === 'Escape') settings.forEach(disclosure => {
+      if (disclosure.open) {
+        disclosure.open = false
+        disclosure.querySelector('summary').focus()
+      }
+    })
   })
 })

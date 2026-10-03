@@ -10,7 +10,7 @@ hugo server --bind 127.0.0.1 --port 1313
 
 Build the production site with `hugo --gc --minify`.
 
-The layouts, gallery shortcodes, and styles live in this repository. The header groups the language list and Light, Dark, and System settings. Theme choices persist across pages.
+The layouts, gallery shortcodes, and styles live in this repository. The header has separate language and appearance controls. Light, Dark, and System choices persist across pages.
 
 Search uses a small JSON index for each language. Open it from the footer or with Ctrl/Cmd K.
 
