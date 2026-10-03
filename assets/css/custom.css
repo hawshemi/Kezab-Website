@@ -187,8 +187,7 @@ a {
   padding-inline-start: 0.625rem;
 }
 
-.header-controls::before,
-.theme-settings::before {
+.header-controls::before {
   content: "";
   position: absolute;
   inset-inline-start: 0;
@@ -199,30 +198,22 @@ a {
   transform: translateY(-50%);
 }
 
-.settings {
-  position: relative;
-}
-
 .settings::details-content {
   opacity: 0;
-  translate: 0 -0.25rem;
-  transition: opacity 140ms ease-out, translate 140ms ease-out, content-visibility 140ms allow-discrete;
+  transition: opacity 140ms ease-out, content-visibility 140ms allow-discrete;
 }
 
 .settings[open]::details-content {
   opacity: 1;
-  translate: 0 0;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .settings::details-content {
-    transition: none;
-    translate: none;
-  }
 }
 
 .theme-settings {
   padding-inline-start: 0.625rem;
+  background: linear-gradient(var(--village-border), var(--village-border)) no-repeat left center / 1px 1.125rem;
+}
+
+html[dir="rtl"] .theme-settings {
+  background-position: right center;
 }
 
 .settings-trigger {
@@ -243,7 +234,8 @@ a {
 }
 
 .language-trigger {
-  min-width: 4.5rem;
+  min-width: 2.375rem;
+  padding-inline: 0.5rem;
   white-space: nowrap;
 }
 
@@ -275,7 +267,7 @@ html[data-theme="system"] [data-theme-icon="system"] {
 
 .settings-panel {
   position: absolute;
-  inset-block-start: calc(100% + 0.4rem);
+  inset-block-start: calc(100% + 0.5rem);
   inset-inline-end: 0;
   padding: 0.25rem;
   border: 1px solid var(--village-border);
@@ -283,10 +275,27 @@ html[data-theme="system"] [data-theme-icon="system"] {
   background: var(--village-bg);
   box-shadow: 0 0.25rem 0.75rem #0001;
   pointer-events: none;
+  translate: 0 -0.25rem;
+  transition: translate 140ms ease-out;
 }
 
 .settings[open] .settings-panel {
   pointer-events: auto;
+  translate: 0 0;
+}
+
+@starting-style {
+  .settings[open] .settings-panel {
+    translate: 0 -0.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .settings::details-content,
+  .settings-panel {
+    transition: none;
+    translate: none;
+  }
 }
 
 .language-panel {
@@ -294,7 +303,7 @@ html[data-theme="system"] [data-theme-icon="system"] {
 }
 
 .theme-panel {
-  width: 13rem;
+  width: max-content;
 }
 
 .settings-language {
@@ -331,8 +340,8 @@ html[data-theme="system"] [data-theme-icon="system"] {
 
 .theme-options {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.15rem;
+  grid-template-columns: repeat(3, 2.375rem);
+  gap: 0.25rem;
   margin: 0;
 }
 .theme-options label {
@@ -343,8 +352,13 @@ html[data-theme="system"] [data-theme-icon="system"] {
   min-height: 2.375rem;
   border-radius: var(--village-radius);
   color: var(--village-muted);
-  font-size: 0.875rem;
   cursor: pointer;
+}
+
+.theme-options svg {
+  display: block;
+  width: 1rem;
+  height: 1rem;
 }
 
 .theme-options input {
@@ -355,13 +369,8 @@ html[data-theme="system"] [data-theme-icon="system"] {
 }
 
 .theme-options label:has(input:checked) {
+  background: var(--village-surface);
   color: var(--village-olive);
-  font-weight: 500;
-}
-
-.theme-options input:checked + span {
-  text-decoration: underline;
-  text-underline-offset: 0.3em;
 }
 
 .theme-options label:hover {
@@ -824,6 +833,10 @@ html[lang="fa"] .content {
 }
 
 @media (pointer: coarse) {
+  .theme-options {
+    grid-template-columns: repeat(3, 2.75rem);
+  }
+
   .site-nav a,
   .settings-trigger,
   .settings-language a,
