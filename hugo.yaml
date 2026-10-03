@@ -39,12 +39,3 @@ menu:
       weight: 4
 
 disableKinds: [taxonomy, term]
-
-outputFormats:
-  Search:
-    mediaType: application/json
-    baseName: search
-    isPlainText: true
-
-outputs:
-  home: [HTML, RSS, Search]
