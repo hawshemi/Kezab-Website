@@ -17,3 +17,7 @@ The layouts, gallery shortcodes, and styles live in this repository. The header 
 [Roboto](https://github.com/google/fonts/tree/main/ofl/roboto) and [Vazirmatn](https://github.com/google/fonts/tree/main/ofl/vazirmatn) are self-hosted in `static/fonts`. The variable WOFF2 files cover weights 100–900. They use Google Fonts' Latin and Arabic subsets. Both SIL Open Font License files are included in `static/licenses`.
 
 [kezab.ir](https://kezab.ir/) is hosted on Cloudflare Pages. The build command is `hugo --gc --minify` and the output directory is `public`. Set `HUGO_VERSION=0.167.0` for both Production and Preview in the Pages build variables.
+
+Use `static/favicon.svg` as the source for [RealFaviconGenerator](https://realfavicongenerator.net/). Put its generated icon set in `static` and update the icon links in `layouts/_partials/head.html` to match the generated markup.
+
+After publishing, verify the `kezab.ir` domain in Google Search Console, submit `https://kezab.ir/sitemap.xml`, and inspect the Persian and English homepages for indexing.

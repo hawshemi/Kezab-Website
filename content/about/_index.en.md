@@ -1,5 +1,6 @@
 ---
-title: About Kezab village
+title: About the village
+description: Learn about Kezab village in Yazd Province, Iran, including its location, mountain terrain, climate, spring, qanats, and water storage pool.
 ---
 
 <nav class="section-nav" aria-label="On this page">
@@ -15,10 +16,11 @@ title: About Kezab village
   <div><dt>Province</dt><dd>Yazd</dd></div>
   <div><dt>County</dt><dd>Ashkezar</dd></div>
   <div><dt>District</dt><dd>Khezrabad</dd></div>
-  <div><dt>Rural district</dt><dd>Khezrabad</dd></div>
-  <div><dt>City</dt><dd>Kezab</dd></div>
+  <div><dt>Rural district</dt><dd>Kezab</dd></div>
   <div><dt>Village</dt><dd>Kezab</dd></div>
 </dl>
+
+The rural district is named Kezab in the [government decree](https://web.archive.org/web/20210709184950/https://qavanin.ir/Law/TreeText/131130).
 
 Kezab was historically known as "Ker-e Ab," meaning "abundance of water."
 
@@ -111,8 +113,8 @@ By analyzing wind direction in Kezab, which blows from the mountains (northeast)
   <table>
     <thead>
       <tr>
-        <th scope="col">Maximum temperature in the last 100 years</th>
-        <th scope="col">Minimum temperature in the last 100 years</th>
+        <th scope="col">Maximum temperature</th>
+        <th scope="col">Minimum temperature</th>
       </tr>
     </thead>
     <tbody>
@@ -130,8 +132,8 @@ By analyzing wind direction in Kezab, which blows from the mountains (northeast)
   <table>
     <thead>
       <tr>
-        <th scope="col">Maximum rainfall in the last 100 years</th>
-        <th scope="col">Minimum rainfall in the last 100 years</th>
+        <th scope="col">Maximum rainfall</th>
+        <th scope="col">Minimum rainfall</th>
       </tr>
     </thead>
     <tbody>
@@ -149,8 +151,8 @@ By analyzing wind direction in Kezab, which blows from the mountains (northeast)
   <table>
     <thead>
       <tr>
-        <th scope="col">Maximum wind speed in the last 100 years</th>
-        <th scope="col">Minimum wind speed in the last 100 years</th>
+        <th scope="col">Maximum wind speed</th>
+        <th scope="col">Minimum wind speed</th>
       </tr>
     </thead>
     <tbody>

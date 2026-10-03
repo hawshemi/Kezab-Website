@@ -1,5 +1,6 @@
 ---
 title: Contact
+description: Contact the Kezab village website to share information, photographs, or corrections about the village in Yazd, Iran.
 ---
 
 <div class="contact-details">
