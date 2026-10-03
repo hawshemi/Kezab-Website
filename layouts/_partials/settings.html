@@ -1,0 +1,31 @@
+{{ $page := . }}
+{{ $translations := .AllTranslations }}
+{{ if eq .Kind "404" }}
+  {{ $translations = slice }}
+  {{ range hugo.Sites }}{{ $translations = $translations | append .Home }}{{ end }}
+{{ end }}
+<details class="settings">
+  <summary class="settings-trigger" aria-label="{{ T "languageAndAppearance" }}">
+    <span>{{ site.Language.Label }}</span>
+    <svg data-theme-icon="light" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+    <svg data-theme-icon="dark" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14a9 9 0 0 1-10.5-10.5A9 9 0 1 0 20.5 14Z"/></svg>
+    <svg data-theme-icon="system" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+    <svg class="settings-chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
+  </summary>
+  <div class="settings-panel">
+    <p class="settings-label">{{ T "language" }}</p>
+    <div class="settings-language">
+      {{ range $translations }}
+      <a href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}" dir="{{ .Language.Direction }}" hreflang="{{ .Language.Lang }}"{{ if eq .Language.Lang $page.Language.Lang }} aria-current="true"{{ end }}>{{ .Language.Label }}</a>
+      {{ end }}
+    </div>
+    <fieldset class="theme-group">
+      <legend class="settings-label">{{ T "appearance" }}</legend>
+      <div class="theme-options">
+      {{ range slice "light" "dark" "system" }}
+      <label><input type="radio" name="color-theme" value="{{ . }}"{{ if eq . "system" }} checked{{ end }}><span>{{ T . }}</span></label>
+      {{ end }}
+      </div>
+    </fieldset>
+  </div>
+</details>

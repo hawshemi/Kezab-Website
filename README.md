@@ -1,8 +1,8 @@
 # Kezab website
 
-A bilingual village website built with Hugo 0.167.0 extended and Hextra 0.13.0. Persian is served at `/` and English at `/en/`.
+A bilingual village website built with Hugo 0.167.0 extended and custom layouts. Persian is served at `/` and English at `/en/`.
 
-Install Hugo 0.167.0 extended and Go 1.21 or newer. Start a local preview with:
+Install Hugo 0.167.0 extended. Start a local preview with:
 
 ```sh
 hugo server --bind 127.0.0.1 --port 1313
@@ -10,7 +10,11 @@ hugo server --bind 127.0.0.1 --port 1313
 
 Build the production site with `hugo --gc --minify`.
 
-The theme's [FlexSearch 0.8.143](https://www.npmjs.com/package/flexsearch/v/0.8.143) and [PhotoSwipe 5.4.4](https://www.npmjs.com/package/photoswipe/v/5.4.4) files are bundled in `assets/vendor` so builds do not need CDN access. Their licenses are included in `static/licenses`.
+The layouts, gallery shortcodes, and styles live in this repository. The header groups the language list and Light, Dark, and System settings. Theme choices persist across pages.
+
+Search uses a small JSON index for each language. Open it from the footer or with Ctrl/Cmd K.
+
+[PhotoSwipe 5.4.4](https://www.npmjs.com/package/photoswipe/v/5.4.4) is bundled in `assets/vendor`. Its license is included in `static/licenses`. Builds do not need Go, npm, or CDN access.
 
 [Roboto](https://github.com/google/fonts/tree/main/ofl/roboto) and [Vazirmatn](https://github.com/google/fonts/tree/main/ofl/vazirmatn) are self-hosted in `static/fonts`. The variable WOFF2 files cover weights 100–900. They use Google Fonts' Latin and Arabic subsets. Both SIL Open Font License files are included in `static/licenses`.
 

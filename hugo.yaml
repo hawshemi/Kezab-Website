@@ -1,19 +1,10 @@
 baseURL: https://kezab.ir/
 title: روستای کذاب
 
-module:
-  imports:
-    - path: github.com/imfing/hextra
-    
 markup:
   goldmark:
     renderer:
       unsafe: true
-
-  highlight:
-    noClasses: false
-
-enableInlineShortcodes: true
 
 defaultContentLanguage: fa
 defaultContentLanguageInSubdir: false
@@ -35,44 +26,25 @@ languages:
 menu:
   main:
     - identifier: home
-      name: Home
       pageRef: /
       weight: 1
     - identifier: about
-      name: About
       pageRef: /about
       weight: 2
     - identifier: gallery
-      name: Gallery
       pageRef: /gallery
       weight: 3
     - identifier: contact
-      name: Contact
       pageRef: /contact
       weight: 4
-    - name: Language
-      weight: 6
-      params:
-        type: language-switch
-        label: true
 
-params:
-  theme:
-    default: system
-    displayToggle: true
+disableKinds: [taxonomy, term]
 
-  search:
-    enable: true
-    type: flexsearch
-    flexsearch:
-      index: content
-      js: vendor/flexsearch-0.8.143.min.js
+outputFormats:
+  Search:
+    mediaType: application/json
+    baseName: search
+    isPlainText: true
 
-  navbar:
-    displayTitle: true
-    displayLogo: false
-
-  footer:
-    displayTitle: true
-    displayCopyright: true
-    displayPoweredBy: false
+outputs:
+  home: [HTML, RSS, Search]

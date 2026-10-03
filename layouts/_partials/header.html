@@ -1,0 +1,15 @@
+{{ $page := . }}
+<header class="site-header">
+  <div class="header-inner">
+    <a class="site-brand" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+    <nav class="site-nav" aria-label="{{ T "menu" }}">
+      {{ range site.Menus.main }}
+        {{ $link := .Page.RelPermalink }}
+        <a href="{{ $link }}"{{ if eq $page.RelPermalink $link }} aria-current="page"{{ end }}>{{ T .Identifier }}</a>
+      {{ end }}
+    </nav>
+    <div class="header-controls">
+      {{ partial "settings.html" . }}
+    </div>
+  </div>
+</header>

@@ -1,6 +1,5 @@
 ---
 title: ارتباط
-toc: false
 aliases: ["/fa/contact/"]
 ---
 
