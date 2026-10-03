@@ -13,6 +13,9 @@
 <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
 {{ if eq .Language.Lang "fa" }}<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">{{ end }}
 {{ end }}
+{{ if and .IsHome (eq site.Language.Lang "fa") }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "WebSite" "name" site.Title "alternateName" "Kezab Village" "url" .Permalink | jsonify | safeJS }}</script>
+{{ end }}
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $description }}">
@@ -25,6 +28,7 @@
 <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
 <link rel="icon" href="{{ "favicon-32x32.png" | relURL }}" type="image/png" sizes="32x32">
 <link rel="icon" href="{{ "favicon-16x16.png" | relURL }}" type="image/png" sizes="16x16">
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml" sizes="any">
 <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
 <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
 <meta name="theme-color" content="#f8f7f2" media="(prefers-color-scheme: light)">

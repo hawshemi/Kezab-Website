@@ -1,6 +1,9 @@
 ---
-title: Kezab village gallery
+title: Gallery
+description: Browse photos of Kezab village in Yazd, Iran, including orchards, rocky mountain slopes, village lanes, and winter landscapes.
 ---
+
+This gallery shows the landscapes, orchards, lanes, and winter scenes of Kezab village in Yazd, Iran.
 
 ## Outer village
 

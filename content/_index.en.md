@@ -1,5 +1,6 @@
 ---
-title: Kezab village
+title: Kezab village, Yazd, Iran
+description: Explore Kezab village in the Khezrabad District of Ashkezar County, Yazd, Iran. Learn about its landscape and water sources, and browse village photos.
 ---
 
 {{< village-photo alt="Village rooftops and trees below rocky hills" caption="A view of Kezab and its surrounding hills." >}}

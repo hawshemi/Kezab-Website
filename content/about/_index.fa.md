@@ -1,6 +1,6 @@
 ---
-title: درباره‌ی روستای کذاب
-aliases: ["/fa/about/"]
+title: درباره‌ی روستا
+description: آشنایی با موقعیت روستای کذاب در استان یزد، ایران، ناهمواری‌های کوهستانی، اقلیم، چشمه، قنات‌ها و استخر ذخیره آب آن.
 ---
 
 <nav class="section-nav" aria-label="بخش‌های این صفحه">
@@ -16,10 +16,11 @@ aliases: ["/fa/about/"]
   <div><dt>استان</dt><dd>یزد</dd></div>
   <div><dt>شهرستان</dt><dd>اشکذر</dd></div>
   <div><dt>بخش</dt><dd>خضرآباد</dd></div>
-  <div><dt>دهستان</dt><dd>خضرآباد</dd></div>
-  <div><dt>شهر</dt><dd>کذاب</dd></div>
+  <div><dt>دهستان</dt><dd>کذاب</dd></div>
   <div><dt>روستا</dt><dd>کذاب</dd></div>
 </dl>
+
+نام دهستان کذاب در [مصوبه هیئت وزیران](https://web.archive.org/web/20210709184950/https://qavanin.ir/Law/TreeText/131130) آمده است.
 
 کِذاب در گذشته " کِرِ آب" بوده و معنی "فراوانی آب" است.
 
@@ -115,8 +116,8 @@ aliases: ["/fa/about/"]
   <table>
     <thead>
       <tr>
-        <th scope="col">حداکثر دما در 100 سال اخیر</th>
-        <th scope="col">حداقل دما در 100 سال اخیر</th>
+        <th scope="col">حداکثر دما</th>
+        <th scope="col">حداقل دما</th>
       </tr>
     </thead>
     <tbody>
@@ -135,8 +136,8 @@ aliases: ["/fa/about/"]
   <table>
     <thead>
       <tr>
-        <th scope="col">حداکثر بارش در 100 سال اخیر</th>
-        <th scope="col">حداقل بارش در 100 سال اخیر</th>
+        <th scope="col">حداکثر بارش</th>
+        <th scope="col">حداقل بارش</th>
       </tr>
     </thead>
     <tbody>
@@ -155,8 +156,8 @@ aliases: ["/fa/about/"]
   <table>
     <thead>
       <tr>
-        <th scope="col">حداکثر سرعت باد در 100 سال اخیر</th>
-        <th scope="col">حداقل سرعت باد در 100 سال اخیر</th>
+        <th scope="col">حداکثر سرعت باد</th>
+        <th scope="col">حداقل سرعت باد</th>
       </tr>
     </thead>
     <tbody>

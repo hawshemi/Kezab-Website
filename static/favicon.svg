@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 64 64">
+  <title>Kezab village</title>
+  <rect width="64" height="64" rx="14" fill="#4d6342"/>
+  <path d="M10 39 27 18 38 31 45 24 56 39Z" fill="#f8f7f2"/>
+  <path d="M12 48c7-5 13 5 20 0s13 5 20 0" fill="none" stroke="#f8f7f2" stroke-width="4" stroke-linecap="round"/>
+</svg>
