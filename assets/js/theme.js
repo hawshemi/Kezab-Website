@@ -13,7 +13,10 @@ systemTheme.addEventListener('change', applyTheme)
 document.addEventListener('DOMContentLoaded', () => {
   const settings = document.querySelectorAll('.settings')
   settings.forEach(disclosure => {
+    const panel = disclosure.querySelector('.settings-panel')
+    panel.inert = !disclosure.open
     disclosure.addEventListener('toggle', () => {
+      panel.inert = !disclosure.open
       if (disclosure.open) settings.forEach(other => {
         if (other !== disclosure) other.open = false
       })

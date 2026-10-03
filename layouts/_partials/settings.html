@@ -9,7 +9,6 @@
     <span>{{ site.Language.Label }}</span>
   </summary>
   <div class="settings-panel language-panel">
-    <p class="settings-label">{{ T "language" }}</p>
     <div class="settings-language">
       {{ range $translations }}
       <a href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}" dir="{{ .Language.Direction }}" hreflang="{{ .Language.Lang }}"{{ if eq .Language.Lang $page.Language.Lang }} aria-current="true"{{ end }}>{{ .Language.Label }}</a>
@@ -25,7 +24,7 @@
   </summary>
   <div class="settings-panel theme-panel">
     <fieldset class="theme-group">
-      <legend class="settings-label">{{ T "appearance" }}</legend>
+      <legend class="sr-only">{{ T "appearance" }}</legend>
       <div class="theme-options">
       {{ range slice "light" "dark" "system" }}
       <label><input type="radio" name="color-theme" value="{{ . }}"{{ if eq . "system" }} checked{{ end }}><span>{{ T . }}</span></label>
